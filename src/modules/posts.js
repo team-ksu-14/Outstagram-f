@@ -11,19 +11,12 @@ const GET_POST_SUCCESS = 'GET_POST_SUCCESS';
 const GET_POST_ERROR = 'GET_POST_ERROR';
 
 const GO_TO_HOME = 'GO_TO_HOME';
+const GO_TO_USER = 'GO_TO_USER';
+const GO_TO_EXPLORE = 'GO_TO_EXPLORE';
 
 const CLEAR_POST = 'CLEAR_POST';
 
 const PRINT_STATE = 'PRINT_STATE'
-
-// thunk 생성함수
-// export const getPosts = createPromiseThunk(GET_POSTS, postsAPI.getPosts);
-// export const getPost = createPromiseThunkById(GET_POST, postsAPI.getPostById);
-
-// thunk Router
-// export const goToHome = () => (dispatch, getState, { history }) => {
-//     history.push('/');
-// }
 
 // Saga action 생성함수
 export const getPosts = () => ({ type: GET_POSTS});
@@ -40,6 +33,14 @@ function* goToHomeSaga() {
     const history = yield getContext('history');
     history.push('/');
 }
+function* goToUserSaga() {
+    const history = yield getContext('history');
+    history.push('/user');
+}
+function* goToExploreSaga() {
+    const history = yield getContext('history');
+    history.push('/explore');
+}
 function* printStateSaga(){
     const state = yield select(state => state.posts);
     console.log(state);
@@ -49,10 +50,14 @@ export function* postsSaga() {
     yield takeEvery(GET_POSTS, getPostsSaga);
     yield takeEvery(GET_POST, getPostSaga);
     yield takeEvery(GO_TO_HOME, goToHomeSaga);
+    yield takeEvery(GO_TO_USER, goToUserSaga);
+    yield takeEvery(GO_TO_EXPLORE, goToExploreSaga);
     yield takeEvery(PRINT_STATE, printStateSaga);
 }
 
 export const goToHome = () => ({ type: GO_TO_HOME });
+export const goToUser = () => ({ type: GO_TO_USER });
+export const goToExplore = () => ({ type: GO_TO_EXPLORE});
 export const clearPost = () => ({ type: CLEAR_POST });
 
 const initialState = {
