@@ -1,19 +1,40 @@
 {
-    "posts" : [
-        {
-          "id": 1,
-          "title": "test1",
-          "body": "body1"
-        },
-        {
-          "id": 2,
-          "title": "test2",
-          "body": "body2"
-        },
-        {
-          "id": 3,
-          "title": "test3",
-          "body": "body3"
-        }
-    ]
+  "posts": [
+    {
+      "id": "5df50a8c5e9cc81936c3dc16",
+      "image": "http://placeimg.com/512/512/1",
+      "title": "TEST-TITLE-1",
+      "description": "TEST-DESCRIPTION-1",
+      "tagList": null,
+      "createdAt": "2019-12-15T01:15:07.887",
+      "updatedAt": null,
+      "favoritesCount": 0,
+      "favoritedMemberId": null,
+      "memberId": null
+    },
+    {
+      "id": "5df50a8c5e9cc81936c3dc17",
+      "image": "http://placeimg.com/512/512/2",
+      "title": "TEST-TITLE-2",
+      "description": "TEST-DESCRIPTION-2",
+      "tagList": null,
+      "createdAt": "2019-12-15T01:15:07.887",
+      "updatedAt": null,
+      "favoritesCount": 0,
+      "favoritedMemberId": null,
+      "memberId": null
+    },
+    {
+      "id": "5df50a8c5e9cc81936c3dc15",
+      "image": "http://placeimg.com/512/512/3",
+      "title": "TEST-TITLE-3",
+      "description": "TEST-DESCRIPTION-3",
+      "tagList": null,
+      "createdAt": "2019-12-15T01:15:07.886",
+      "updatedAt": null,
+      "favoritesCount": 0,
+      "favoritedMemberId": null,
+      "memberId": null
+    }
+  ]
 }
