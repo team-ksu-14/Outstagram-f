@@ -1,13 +1,14 @@
 import React from 'react';
 import PrimarySearchAppBar from '../components/PrimarySearchAppBar';
+import UserProfile from '../components/UserProfile';
 
-function User(){
+export default function User() {
+
     return(
         <div>
             <PrimarySearchAppBar/>
-            User
+            <UserProfile/>
         </div>
     );
 }
 
-export default User;
