@@ -40,55 +40,6 @@ export const createPromiseSagaById = (type, promiseCreator) =>{
         }
     }
 }
-
-export const createPromiseThunk = (type, promiseCreator) => {
-    const [SUCCESS, ERROR] = [ `${type}_SUCCESS`, `${type}_ERROR` ];
-    
-    return param => async dispatch => {
-        dispatch({ type });
-        try{
-            const payload = await promiseCreator(param)
-            dispatch({
-                type: SUCCESS,
-                payload
-            })
-        } catch (e) {
-            dispatch({
-                type: ERROR,
-                payload: e,
-                error: true
-            });
-        }
-    };
-};
-
-
-const defaultIdSelector = param => param;
-
-export const createPromiseThunkById = (type, promiseCreator, idSelector = defaultIdSelector) => {
-    const [SUCCESS, ERROR] = [ `${type}_SUCCESS`, `${type}_ERROR` ];
-    
-    return param => async dispatch => {
-        const id = idSelector(param)
-        dispatch({ type, meta: id });
-        try{
-            const payload = await promiseCreator(param);
-            dispatch({
-                type: SUCCESS,
-                payload,
-                meta: id
-            })
-        } catch (e) {
-            dispatch({
-                type: ERROR,
-                payload: e,
-                error: true,
-                meta: id
-            });
-        }
-    };
-};
-
 //3가지 액션에 대한 reducer를 만들어서 반환
 export const handleAsyncActions = (type, key, keepData) => {  //createPromiseThunk의 type과 비슷, key 는 posts, post
     const [SUCCESS, ERROR] = [ `${type}_SUCCESS`, `${type}_ERROR` ];

@@ -1,6 +1,5 @@
 import React from 'react';
 import { Route } from 'react-router-dom';
-import PostListPage from './pages/PostListPage'
 import PostPage from './pages/PostPage'
 import Home from './pages/Home';
 import User from './pages/User';
