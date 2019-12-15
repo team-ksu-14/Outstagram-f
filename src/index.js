@@ -33,8 +33,8 @@ sagaMiddleware.run(rootSaga);
 
 ReactDOM.render(
     <Router history={customHistory}>
-        <Provider store = {store}
-            ><App />
+        <Provider store = {store}>
+            <App />
         </Provider> 
     </Router>,
      document.getElementById('root'));
