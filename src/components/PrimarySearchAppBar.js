@@ -6,12 +6,12 @@ import Toolbar, { styles as toolbarStyles } from './Toolbar';
 import IconButton from '@material-ui/core/IconButton';
 import Typography from '@material-ui/core/Typography';
 import InputBase from '@material-ui/core/InputBase';
-import MenuIcon from '@material-ui/icons/LinkedCameraOutlined';
+import MenuIcon from '@material-ui/icons/Instagram';
 import SearchIcon from '@material-ui/icons/Search';
 import AccountCircle from '@material-ui/icons/PermIdentity';
 import MailIcon from '@material-ui/icons/OfflineBoltOutlined';
 import NotificationsIcon from '@material-ui/icons/FavoriteBorder';
-import { goToHome, goToExplore, goToUser } from '../modules/posts';
+import { goToHome, goToExplore, goToUser } from '../modules/pages';
 
 
 
