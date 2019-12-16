@@ -8,7 +8,7 @@ import Signin from './pages/Signin';
 function App() {
   return (
     <>
-      <Route path="/signin" component = {Signin} exact/>
+      <Route path="/" component = {Signin} exact/>
       <Route path="/home" component = {Home} />
       <Route path="/user" component = {User} />
       <Route path="/explore" component = {Explore} />
