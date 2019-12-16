@@ -7,7 +7,7 @@ const GO_TO_EXPLORE = 'GO_TO_EXPLORE';
 
 function* goToSigninSaga() {
     const history = yield getContext('history');
-    history.push('/signin');
+    history.push('/');
 }
 function* goToHomeSaga() {
     const history = yield getContext('history');
