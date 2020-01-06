@@ -1,6 +1,6 @@
 import React from 'react';
 
-function Post({ post }){
+const Post = ({ post }) => {
     const { title, body } = post;
     return(
         <div>
@@ -8,6 +8,6 @@ function Post({ post }){
             <p>{body}</p>
         </div>
     );
-}
+};
 
 export default Post;

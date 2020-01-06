@@ -1,7 +1,7 @@
 import React from 'react';
 import PostCard from './PostCard'
 
-function PostList({ posts }) {
+const PostList = ({ posts }) => {
     return(
         <ul>
             {
@@ -15,6 +15,6 @@ function PostList({ posts }) {
             ))}
         </ul>
     );
-}
+};
 
 export default PostList;

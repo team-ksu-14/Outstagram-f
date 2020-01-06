@@ -38,7 +38,7 @@ const useStyles = makeStyles(theme => ({
     },
 }));
 
-export default function FollwerUserProfile() {
+const FollwerUserProfile = () => {
     const classes = useStyles();
     return (
         <div className = {classes.root}>
@@ -70,3 +70,5 @@ export default function FollwerUserProfile() {
     )
 
 }
+
+export default FollwerUserProfile;

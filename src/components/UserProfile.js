@@ -95,7 +95,7 @@ const Transition = React.forwardRef(function Transition(props, ref) {
   
 Transition.displayName = "Transition";
 
-export default function UserProfile() {
+const UserProfile = () => {
     const classes = useStyles();
   
     const [classicModal, setClassicModal] = React.useState(false);
@@ -217,4 +217,6 @@ export default function UserProfile() {
           </Grid>
         </div>
     );
-}
+};
+
+export default UserProfile;
