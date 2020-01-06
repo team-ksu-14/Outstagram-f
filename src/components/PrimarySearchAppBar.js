@@ -81,7 +81,7 @@ const useStyles = makeStyles(theme => ({
       },
 }));
 
-export default function PrimarySearchAppBar() {
+const PrimarySearchAppBar = () => {
   const classes = useStyles();
   const dispatch = useDispatch();
 
@@ -151,4 +151,6 @@ export default function PrimarySearchAppBar() {
         <div className={classes.placeholder} />
     </div>
   );
-}
+};
+
+export default PrimarySearchAppBar;

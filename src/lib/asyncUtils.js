@@ -17,7 +17,7 @@ export const createPromiseSaga = (type, promiseCreator) => {
             });
         }
     }
-}
+};
 
 export const createPromiseSagaById = (type, promiseCreator) =>{
     const [SUCCESS, ERROR] = [`${type}_SUCCESS`, `${type}_ERROR`];
@@ -39,7 +39,8 @@ export const createPromiseSagaById = (type, promiseCreator) =>{
             });
         }
     }
-}
+};
+
 //3가지 액션에 대한 reducer를 만들어서 반환
 export const handleAsyncActions = (type, key, keepData) => {  //createPromiseThunk의 type과 비슷, key 는 posts, post
     const [SUCCESS, ERROR] = [ `${type}_SUCCESS`, `${type}_ERROR` ];
@@ -65,7 +66,8 @@ export const handleAsyncActions = (type, key, keepData) => {  //createPromiseThu
                 return state;
         }
     }
-}
+};
+
 export const handleAsyncActionsById = (type, key, keepData) => { 
     const [SUCCESS, ERROR] = [ `${type}_SUCCESS`, `${type}_ERROR` ];
     //reducer
@@ -100,9 +102,9 @@ export const handleAsyncActionsById = (type, key, keepData) => {
                 return state;
         }
     }
-}
+};
 
-export const reducerUtils ={
+export const reducerUtils = {
     initial: (data = null) => ({
         data,
         loading: false,

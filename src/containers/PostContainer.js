@@ -4,7 +4,7 @@ import { getPost, printState } from '../modules/posts';
 import Post from '../components/Post'
 import { reducerUtils } from '../lib/asyncUtils';
 
-function PostContainer({ postId }){
+const PostContainer => ({ postId }) = {
     const { data, loading, error} = useSelector(
         state => state.posts.post[postId] || reducerUtils.initial()
     );
@@ -25,6 +25,6 @@ function PostContainer({ postId }){
             <Post post={data}/>
         </>
     );
-}
+};
 
 export default PostContainer;

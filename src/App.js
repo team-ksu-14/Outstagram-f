@@ -5,7 +5,7 @@ import User from './pages/User';
 import Explore from './pages/Explore';
 import Signin from './pages/Signin';
 
-function App() {
+const App = () => {
   return (
     <>
       <Route path="/" component = {Signin} exact/>
@@ -14,6 +14,6 @@ function App() {
       <Route path="/explore" component = {Explore} />
     </>
   );
-}
+};
 
 export default App;

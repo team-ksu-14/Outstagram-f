@@ -45,7 +45,7 @@ const useStyles = makeStyles(theme => ({
       },
 }));
 
-export default function PostCard({title, image, description}) {
+const PostCard = ({title, image, description}) => {
     const classes = useStyles();
     return(
         <Card className={classes.card}>
@@ -94,3 +94,5 @@ export default function PostCard({title, image, description}) {
     </Card>
     );
 };
+
+export default PostCard;
